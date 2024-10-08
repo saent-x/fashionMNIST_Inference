@@ -17,7 +17,6 @@ func main() {
 
 func Setup() http.Handler {
 	mux := http.NewServeMux()
-	//- Pages
 
 	handlers.Static(mux)
 	handlers.HandleUpload(mux)
