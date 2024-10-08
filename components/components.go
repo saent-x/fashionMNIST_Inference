@@ -27,6 +27,7 @@ func InferenceComponent() Node {
 				Attr("hx-post", "/upload"),
 				Attr("hx-target", "#results"),
 				Input(Type("file"), Class("file-input w-full max-w-xs"), Name("file"), ID("file")),
+				Br(),
 				Button(Class("btn btn-active btn-neutral mt-10 w-[200px]"), Text("Predict"), Type("submit")),
 			),
 		))
@@ -34,7 +35,7 @@ func InferenceComponent() Node {
 
 func ResultsComponent() Node {
 	return Div(Class("pt-10"),
-		H2(Class("text-center text-xl"), Text("---Results---")),
+		H2(Class("text-center text-3xl"), Text("---Results---")),
 		Div(Class("pt-10 w-[300px] mx-auto"), ID("results")),
 	)
 }
